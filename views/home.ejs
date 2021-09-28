@@ -1,18 +1,18 @@
 <!-- EJS Templating -->
-<%- include("partials/header", {apiKey : apiKey}) %> 
+<%- include("partials/header", {apiKey : apiKey}) %>
 
 <h1>Home</h1>
 <p> <%= body %> </p>
 
 <!-- Using EJS to insert JS in HTML -->
 <%  blogPosts.forEach(blogPost => { %>
-        <div>
-                <h1> <%= blogPost.title %> </h1>
-                 <p> 
-                        To read this blog, click here :
-                        <a href="/post/<%= blogPost.title %> ">Read Blog!</a>
-                 </p>
-        </div> 
+<div>
+        <h1> <%= blogPost.title %> </h1>
+        <p>
+                To read this blog, click here :
+                <a href="/post/<%= blogPost._id %> ">Read Blog!</a>
+        </p>
+</div>
 <% }); %>
-   
-<%- include("partials/footer") %> 
+
+<%- include("partials/footer") %>
